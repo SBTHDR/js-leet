@@ -29,3 +29,20 @@ const linearSearch = (nums, target) => {
 // Space Complexity - O(1)
 console.log(linearSearch([4,5,6,7,0,1,2], 0));
 console.log(linearSearch([4,5,6,7,0,1,2], 3));
+
+// Linear Search for Multiple Elements
+
+const globalLinearSearch = (nums, target) => {
+  const result = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (target === nums[i]) {
+      result.push(i);
+    }
+  }
+  if (result.length === 0) return -1;
+  return result;
+};
+
+// Time Complexity  - O(n)
+// Space Complexity - O(n)
+console.log(globalLinearSearch([4, 5, 0, 7, 0, 1, 2], 0));
